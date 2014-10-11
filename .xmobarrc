@@ -10,6 +10,6 @@ Config { font = "-*-Fixed-Bold-R-Normal-*-13-*-*-*-*-*-*-*"
                     , Run StdinReader
                     ]
        , sepChar = "%"
-       , alignSep = "}{"
+       , alignSep = "}{",
        , template = "%StdinReader% }{ %cpu% | %memory% * %swap%    <fc=#ee9a00>%date%</fc> | %EGPF%"
        }

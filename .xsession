@@ -1,8 +1,8 @@
 #!/bin/bash
 
-trayer --edge top --align right --SetDockType true --SetPartialStrut true \ --expand true --width 10 --transparent true --tint 0x191970 --height 12 &
+sh .load_trayer.sh
 
-xsetroot -solid midnightblue
+xsetroot -solid black
 
 xchat &
 
@@ -18,3 +18,5 @@ if [ -x /usr/bin/gnome-power-manager ] ; then
 fi
 
 xmonad | xmobar
+
+sh .autorandr
