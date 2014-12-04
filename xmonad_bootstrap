@@ -1,0 +1,23 @@
+#!/bin/bash
+
+sh .load_trayer.sh
+
+xsetroot -solid black
+
+hexchat &
+
+xscreensaver -no-splash &
+
+if [ -x /usr/bin/nm-applet ] ; then
+   nm-applet --sm-disable &
+fi
+
+if [ -x /usr/bin/gnome-power-manager ] ; then
+   sleep 3
+   gnome-power-manager &
+fi
+
+xrandr --addmode DP1 "1920x1080"
+sh autorandr.sh
+
+xmonad | xmobar
